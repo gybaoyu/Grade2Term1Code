@@ -88,9 +88,63 @@ LNode* findElem(LNode* &headNode,ElemType value){
 	cout<<"didn't find the value"<<endl;
 	return NULL;
 }
+
+// 合并两个有序链表
+LNode* merge(LNode* l1, LNode* l2) {
+	LNode dummy; 
+	LNode* tail = &dummy;
+
+	while (l1 != NULL && l2 != NULL) {
+		if (l1->data <= l2->data) {
+			tail->next = l1;
+			l1 = l1->next;
+		} else {
+			tail->next = l2;
+			l2 = l2->next;
+		}
+		tail = tail->next;
+	}
+	tail->next = (l1 != NULL) ? l1 : l2;
+	return dummy.next;
+}
+
+LNode* findMid(LNode* head) {
+	if (head == NULL) return head;
+	LNode* slow = head;
+	LNode* fast = head->next;
+
+	while (fast != NULL && fast->next != NULL) {
+		slow = slow->next;
+		fast = fast->next->next;
+	}
+	return slow;
+}
+
+// 归并排序
+LNode* mergeSort(LNode* head) {
+	if (head == NULL || head->next == NULL) {
+		return head;
+	}
+	
+	LNode* mid = findMid(head);
+	LNode* rightHead = mid->next;
+	mid->next = NULL;
+
+	LNode* leftSorted = mergeSort(head);
+	LNode* rightSorted = mergeSort(rightHead);
+
+	return merge(leftSorted, rightSorted);
+}
+
 /*
 示例输入：
- 3 1 2 3
+ (分别为list list1 list2的数据)
+ 3
+ 1 2 3
+ 5
+ 5 2 1 3 4
+ 6
+ 3 4 12 32 26 13
  */
 int main() {
 	LNode *nodeList;
@@ -117,5 +171,17 @@ int main() {
 	//T6
 	findElem(nodeList,666);
 	findElem(nodeList,111);
+
+	//T7
+	LNode *nodeList1,*nodeList2,*nodeList3;
+	initHeadNode(nodeList1);
+	initHeadNode(nodeList2);
+	createNodeList(nodeList1);
+	createNodeList(nodeList2);
+	mergeSort(nodeList1);
+	mergeSort(nodeList2->next);
+	printList(nodeList1->next);
+	nodeList3 = merge(nodeList1->next,nodeList2->next);
+
 	return 0;
 }
