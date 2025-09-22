@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -36,7 +37,7 @@ void createNodeList(LNode *&headNode) {
 
 void printList(LNode *list) {
 	LNode *n = list;
-	cout << "head node: " << n->data << endl << "elements:";
+//	cout << "head node: " << n->data << endl << "elements:";
 	while (n->next != NULL) {
 		n = n->next;
 		cout << n->data << " ";
@@ -57,49 +58,53 @@ void insertNode(LNode *&headNode, int pos, ElemType value) {//在第pos个元素
 }
 
 void deleteNode(LNode *&headNode, int pos) {//删除第pos个节点，头节点pos=0,pos大于链表长度时删除最后一个节点
-	LNode* L = headNode;
-	LNode* prev;
+	LNode *L = headNode;
+	LNode *prev;
 	while (L->next != NULL && pos > 1) {
 		pos--;
 		prev = L;
 		L = L->next;
 	}
-	if(L->next==NULL){
+	if (L->next == NULL) {
 		prev->next = NULL;
 		free(L);
-	}else{
+	} else {
 		LNode *tmp = L->next;
 		L->next = tmp->next;
 		free(tmp);
 	}
 }
 
-LNode* findElem(LNode* &headNode,ElemType value){
-	LNode* l = headNode;
+LNode *findElem(LNode *&headNode, ElemType value) {
+	LNode *l = headNode;
 	int pos = 0;
-	while(l->next!=NULL){
-		l=l->next;
+	while (l->next != NULL) {
+		l = l->next;
 		pos++;
-		if(l->data==value){
-			cout<<"The value was found at No."<<pos<<endl;
+		if (l->data == value) {
+			cout << "The value was found at No." << pos << endl;
 			return l;
 		}
 	}
-	cout<<"didn't find the value"<<endl;
+	cout << "didn't find the value" << endl;
 	return NULL;
 }
 
 // 合并两个有序链表
-LNode* merge(LNode* l1, LNode* l2) {
-	LNode dummy; 
-	LNode* tail = &dummy;
+LNode *merge(LNode *l1, LNode *l2) {
+	LNode dummy;
+	LNode *tail = &dummy;
 
 	while (l1 != NULL && l2 != NULL) {
-		if (l1->data <= l2->data) {
+		if (l1->data < l2->data) {
 			tail->next = l1;
 			l1 = l1->next;
-		} else {
+		} else if (l1->data > l2->data) {
 			tail->next = l2;
+			l2 = l2->next;
+		} else {
+			tail->next = l1;
+			l1 = l1->next;
 			l2 = l2->next;
 		}
 		tail = tail->next;
@@ -108,10 +113,10 @@ LNode* merge(LNode* l1, LNode* l2) {
 	return dummy.next;
 }
 
-LNode* findMid(LNode* head) {
+LNode *findMid(LNode *head) {
 	if (head == NULL) return head;
-	LNode* slow = head;
-	LNode* fast = head->next;
+	LNode *slow = head;
+	LNode *fast = head->next;
 
 	while (fast != NULL && fast->next != NULL) {
 		slow = slow->next;
@@ -121,19 +126,30 @@ LNode* findMid(LNode* head) {
 }
 
 // 归并排序
-LNode* mergeSort(LNode* head) {
+LNode *mergeSort(LNode *head) {
 	if (head == NULL || head->next == NULL) {
 		return head;
 	}
-	
-	LNode* mid = findMid(head);
-	LNode* rightHead = mid->next;
+
+	LNode *mid = findMid(head);
+	LNode *rightHead = mid->next;
 	mid->next = NULL;
 
-	LNode* leftSorted = mergeSort(head);
-	LNode* rightSorted = mergeSort(rightHead);
+	LNode *leftSorted = mergeSort(head);
+	LNode *rightSorted = mergeSort(rightHead);
 
 	return merge(leftSorted, rightSorted);
+}
+
+void reverse(LNode *&nodeList) {
+	LNode *prev= NULL,*curr = nodeList->next,*next= NULL;
+	while(curr!=NULL){
+		next = curr->next;
+		curr->next = prev;
+		prev = curr;
+		curr = next;
+	}
+	nodeList->next = prev;
 }
 
 /*
@@ -166,22 +182,30 @@ int main() {
 	printList(nodeList);
 	deleteNode(nodeList, 10);
 	printList(nodeList);
-	cout<<endl;
+	cout << endl;
 
 	//T6
-	findElem(nodeList,666);
-	findElem(nodeList,111);
+	findElem(nodeList, 666);
+	findElem(nodeList, 111);
 
 	//T7
-	LNode *nodeList1,*nodeList2,*nodeList3;
+	LNode *nodeList1, *nodeList2, *nodeList3;
 	initHeadNode(nodeList1);
 	initHeadNode(nodeList2);
 	createNodeList(nodeList1);
 	createNodeList(nodeList2);
 	mergeSort(nodeList1);
-	mergeSort(nodeList2->next);
-	printList(nodeList1->next);
-	nodeList3 = merge(nodeList1->next,nodeList2->next);
+	mergeSort(nodeList2);
+	printList(nodeList1);
+	nodeList3 = merge(nodeList1, nodeList2);
+	printList(nodeList3);
+	cout << endl;
 
+	//T8
+	printList(nodeList3);
+	cout<<"reverse: ";
+	reverse(nodeList3);
+	printList(nodeList3);
+	cout<<endl;
 	return 0;
 }
