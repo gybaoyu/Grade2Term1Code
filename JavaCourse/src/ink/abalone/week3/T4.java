@@ -3,7 +3,7 @@ package ink.abalone.week3;
 import java.util.Scanner;
 
 public class T4 {
-    static boolean guessLetter(char c,StringBuilder wordDisplay,String word){
+    private static boolean guessLetter(char c,StringBuilder wordDisplay,String word){
         boolean flag = false;
         for(int i=0;i<word.length();i++){
             if(word.charAt(i)==c) {
