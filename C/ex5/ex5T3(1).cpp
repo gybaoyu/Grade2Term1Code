@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 typedef int ElemType;
 struct QNode {
@@ -49,27 +50,22 @@ ElemType DeQueue(LinkQueue *q) {
 }
 
 void solve(int n) {
-	LinkQueue q;
-	InitQueue(&q);
-	EnQueue(&q, 1);
-	for (int i = 1; i <=n-1; ++i) cout<<" ";
-	cout<<1<<endl;
-	for (int i = 2; i <= n; i++) {
-		for (int j = 0; j < n-i; ++j) cout<<" ";
-		int prev = 0;
-		int curr;
-		for (int j = 1; j <= i; j++) {
-			if (j == 1 || j == i) {
-				curr = 1;
-			} else {
-				int top_right = q.front->data;
-				curr = prev + top_right;
-			}
-			cout << curr << " ";
-			EnQueue(&q, curr);
-			if (j < i) prev = DeQueue(&q);
+	LinkQueue Q;
+	InitQueue(&Q);
+	EnQueue(&Q, 1);
+	EnQueue(&Q, 1);
+	int s = 0;
+	cout<<1;
+	for (int i = 1; i < n; i++) {
+		cout << endl;
+		EnQueue(&Q, 0);
+		for (int j = 1; j <= i + 2; j++) {
+			int t = DeQueue(&Q);
+			EnQueue(&Q, s + t);
+			s = t;
+			if (j != i + 2)
+				cout << s << ' ';
 		}
-		cout<<endl;
 	}
 }
 
