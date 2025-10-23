@@ -45,17 +45,4 @@ public abstract class GradeItem {
                 ", score=" + score +
                 '}';
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        GradeItem gradeItem = (GradeItem) o;
-        return Double.compare(maxGrade, gradeItem.maxGrade) == 0 && Double.compare(score, gradeItem.score) == 0 && Objects.equals(name, gradeItem.name) && Objects.equals(date, gradeItem.date) && Objects.equals(context, gradeItem.context);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, date, context, maxGrade, score);
-    }
 }
