@@ -12,7 +12,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42d6fb1c-ee9c-4f42-903c-ac0c1ed61e51" name="Changes" comment="" />
+    <list default="true" id="42d6fb1c-ee9c-4f42-903c-ac0c1ed61e51" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ex6/kmp.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/ex5T1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/ex5T1.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/ex5T2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/ex5T2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/ex5T3(1).cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/ex5T3(1).cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/ex5T3(2).cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/ex5T3(2).cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5T3(1).exe" beforeDir="false" afterPath="$PROJECT_DIR$/ex5T3(1).exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5T3(2).exe" beforeDir="false" afterPath="$PROJECT_DIR$/ex5T3(2).exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第二章作业.exe" beforeDir="false" afterPath="$PROJECT_DIR$/第二章作业.exe" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,23 +31,34 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="34SfZi2Fcn00F0UEz2eeaGzd34t" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "C/C++ File.ex5T3(1).cpp.executor": "Debug",
+    "C/C++ File.ex5T1.cpp.executor": "Run",
+    "C/C++ File.ex5T3(1).cpp.executor": "Run",
     "C/C++ File.ex5T3(2).cpp.executor": "Run",
+    "C/C++ File.kmp.cpp.executor": "Run",
+    "C/C++ File.第二章作业.cpp.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Abalone/Desktop/Code/Grade2Term1Code/C",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,6 +70,24 @@
   }
 }]]></component>
   <component name="RunManager" selected="C/C++ File.ex5T3(2).cpp">
+    <configuration name="第二章作业.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C" TARGET_NAME="第二章作业.cpp" CONFIG_NAME="第二章作业.cpp">
+      <option name="sourceFile" value="ex5\第二章作业.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex5T1.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C" TARGET_NAME="ex5T1.cpp" CONFIG_NAME="ex5T1.cpp">
+      <option name="sourceFile" value="ex5\ex5T1.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex5T2.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C" TARGET_NAME="ex5T2.cpp" CONFIG_NAME="ex5T2.cpp">
+      <option name="sourceFile" value="ex5\ex5T2.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ex5T3(1).cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C" TARGET_NAME="ex5T3(1).cpp" CONFIG_NAME="ex5T3(1).cpp">
       <option name="sourceFile" value="ex5\ex5T3(1).cpp" />
       <method v="2">
@@ -57,6 +96,12 @@
     </configuration>
     <configuration name="ex5T3(2).cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C" TARGET_NAME="ex5T3(2).cpp" CONFIG_NAME="ex5T3(2).cpp">
       <option name="sourceFile" value="ex5\ex5T3(2).cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="kmp.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C" TARGET_NAME="kmp.cpp" CONFIG_NAME="kmp.cpp">
+      <option name="sourceFile" value="ex6\kmp.cpp" />
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
@@ -71,6 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761211950769</updated>
       <workItem from="1761211951834" duration="1921000" />
+      <workItem from="1761543689330" duration="2229000" />
     </task>
     <servers />
   </component>

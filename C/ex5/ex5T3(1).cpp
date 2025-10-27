@@ -7,11 +7,10 @@ struct QNode {
 	QNode *next;
 };
 struct LinkQueue {
-	QNode *front;  // 队头指针
-	QNode *rear;   // 队尾指针
+	QNode *front;
+	QNode *rear;
 };
 
-// 初始化队列
 void InitQueue(LinkQueue *q) {
 	q->front = q->rear = NULL;
 }
@@ -25,7 +24,7 @@ void EnQueue(LinkQueue *q, ElemType e) {
 	newNode->data = e;
 	newNode->next = NULL;
 
-	if (q->rear == NULL) {  // 队列为空
+	if (q->rear == NULL) {
 		q->front = q->rear = newNode;
 	} else {
 		q->rear->next = newNode;
@@ -42,7 +41,7 @@ ElemType DeQueue(LinkQueue *q) {
 	ElemType e = temp->data;
 
 	q->front = q->front->next;
-	if (q->front == NULL) {  // 如果队列只有一个元素
+	if (q->front == NULL) {
 		q->rear = NULL;
 	}
 	free(temp);

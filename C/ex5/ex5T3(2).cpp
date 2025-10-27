@@ -1,14 +1,15 @@
 #include <bits/stdc++.h>
+
 typedef int ElemType;
-#define MAX_SIZE 100  // 队列的最大容量
+#define MAX_SIZE 100
 
 using namespace std;
 
 typedef int ElemType;
 struct SqQueue{
 	ElemType data[MAX_SIZE];
-	int front;  // 队头指针
-	int rear;   // 队尾指针
+	int front;
+	int rear;
 };
 void InitQueue(SqQueue *q) {
 	q->front = q->rear = 0;
@@ -71,6 +72,7 @@ void SeeDoctor() {
 }
 
 int main() {
+	system("chcp 65001");
 	SeeDoctor();
 	return 0;
 }

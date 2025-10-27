@@ -5,11 +5,10 @@ struct QNode {
     QNode *next;
 };
 struct  LinkQueue{
-    QNode *front;  // 队头指针
-    QNode *rear;   // 队尾指针
+    QNode *front;
+    QNode *rear;
 };
 
-// 初始化队列
 void InitQueue(LinkQueue *q) {
     q->front = q->rear = NULL;
 }
