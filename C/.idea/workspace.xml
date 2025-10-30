@@ -13,15 +13,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42d6fb1c-ee9c-4f42-903c-ac0c1ed61e51" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ex6/kmp.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex6/ch3homework.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/ex5T1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/ex5T1.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/ex5T2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/ex5T2.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/ex5T3(1).cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/ex5T3(1).cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex5/ex5T3(2).cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/ex5T3(2).cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5T3(1).exe" beforeDir="false" afterPath="$PROJECT_DIR$/ex5T3(1).exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex5T3(2).exe" beforeDir="false" afterPath="$PROJECT_DIR$/ex5T3(2).exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/第二章作业.exe" beforeDir="false" afterPath="$PROJECT_DIR$/第二章作业.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex6/kmp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ex6/kmp.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,9 +65,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="C/C++ File.ex5T3(2).cpp">
+  <component name="RunManager" selected="C/C++ File.ch3homework.cpp">
     <configuration name="第二章作业.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C" TARGET_NAME="第二章作业.cpp" CONFIG_NAME="第二章作业.cpp">
       <option name="sourceFile" value="ex5\第二章作业.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ch3homework.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C" TARGET_NAME="ch3homework.cpp" CONFIG_NAME="ch3homework.cpp">
+      <option name="sourceFile" value="ex6\ch3homework.cpp" />
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
@@ -116,7 +118,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761211950769</updated>
       <workItem from="1761211951834" duration="1921000" />
-      <workItem from="1761543689330" duration="2229000" />
+      <workItem from="1761543689330" duration="6419000" />
     </task>
     <servers />
   </component>

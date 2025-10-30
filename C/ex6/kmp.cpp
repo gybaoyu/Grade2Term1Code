@@ -20,6 +20,7 @@ int kmp(string &str0,string &str1){
 	return -1;
 }
 
+
 int main() {
 	string s1 = "ATAATA";
 	string s2 = "AGCATAATAATTAA";

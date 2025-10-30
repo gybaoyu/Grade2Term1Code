@@ -17,11 +17,9 @@ void InitQueue(SqQueue *q) {
 int IsEmpty(SqQueue *q) {
 	return q->front == q->rear;
 }
-
 int IsFull(SqQueue *q) {
 	return (q->rear + 1) % MAX_SIZE == q->front;
 }
-
 void EnQueue(SqQueue *q, ElemType e) {
 	if (IsFull(q)) {
 		printf("Queue is full.\n");
@@ -30,7 +28,6 @@ void EnQueue(SqQueue *q, ElemType e) {
 	q->data[q->rear] = e;
 	q->rear = (q->rear + 1) % MAX_SIZE;
 }
-
 ElemType DeQueue(SqQueue *q) {
 	if (IsEmpty(q)) {
 		printf("Queue is empty.\n");
