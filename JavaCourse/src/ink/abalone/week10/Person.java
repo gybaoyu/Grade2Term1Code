@@ -48,7 +48,6 @@ class Test{
         System.out.println(d2);
         d1.feedRequestByInnerClass();
         d1.feedRequestByLambda();
-
         JOptionPane.showMessageDialog(null,"waiting...");
         System.exit(0);
     }
