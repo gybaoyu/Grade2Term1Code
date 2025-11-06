@@ -27,7 +27,6 @@ public class Person implements Cloneable{
                 ", age=" + age +
                 '}';
     }
-
     @Override
     public Person clone() throws CloneNotSupportedException {
         return (Person) super.clone();
