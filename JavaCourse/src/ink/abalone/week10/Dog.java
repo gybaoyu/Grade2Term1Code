@@ -19,8 +19,7 @@ public class Dog implements Cloneable{
     @Override
     protected Object clone() throws CloneNotSupportedException {
         Dog d = (Dog) super.clone();
-        d.name = name;
-        d.master = master;
+        d.master = master.clone();
         return d;
     }
 
