@@ -13,9 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42d6fb1c-ee9c-4f42-903c-ac0c1ed61e51" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ex6/ex6Tree.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch3homework.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ch3homework.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex6/ex6Tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ex6/ex6Tree.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +127,7 @@
       <workItem from="1762394560134" duration="669000" />
       <workItem from="1762421465495" duration="9115000" />
       <workItem from="1762751839663" duration="4047000" />
-      <workItem from="1762756226796" duration="3809000" />
+      <workItem from="1762756226796" duration="4055000" />
     </task>
     <servers />
   </component>

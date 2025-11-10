@@ -12,39 +12,24 @@ struct Node {
 	ElemType data;
 	Node *next;
 };
-
 struct Stack {
 	Node *top;
 	Node *base;
-
 	Stack() : top(nullptr), base(nullptr) {}
 };
-
 struct Queue {
 	Node *front;
 	Node *rear;
-
 	Queue() : front(nullptr), rear(nullptr) {}
 };
 
-/*
--+a@@*b@@-c@@d@@/e@@f@@
-*/
-
 void createTree(TNode *&T);
-
 void preTraverse(TNode *T);
-
 void inTraverse(TNode *T);
-
 void postTraverse(TNode *T);
-
 void inTraverse2(TNode *T);
-
 void layerTraverse(TNode *T);
-
 int getDepth(TNode *T);
-
 int count(TNode *T);
 
 int main() {
