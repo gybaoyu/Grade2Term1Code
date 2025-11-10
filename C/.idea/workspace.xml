@@ -13,7 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42d6fb1c-ee9c-4f42-903c-ac0c1ed61e51" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ex6/ex6Tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ex6/ex6Tree.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex6/huffman.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,33 +38,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;C/C++ File.ch3homework.cpp.executor&quot;: &quot;Run&quot;,
-    &quot;C/C++ File.ex5T1.cpp.executor&quot;: &quot;Run&quot;,
-    &quot;C/C++ File.ex5T3(1).cpp.executor&quot;: &quot;Run&quot;,
-    &quot;C/C++ File.ex5T3(2).cpp.executor&quot;: &quot;Run&quot;,
-    &quot;C/C++ File.ex6Tree.cpp.executor&quot;: &quot;Run&quot;,
-    &quot;C/C++ File.kmp.cpp.executor&quot;: &quot;Run&quot;,
-    &quot;C/C++ File.第二章作业.cpp.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Abalone/Desktop/Code/Grade2Term1Code/C&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "C/C++ File.ch3homework.cpp.executor": "Run",
+    "C/C++ File.ex5T1.cpp.executor": "Run",
+    "C/C++ File.ex5T3(1).cpp.executor": "Run",
+    "C/C++ File.ex5T3(2).cpp.executor": "Run",
+    "C/C++ File.ex6Tree.cpp.executor": "Run",
+    "C/C++ File.huffman.cpp.executor": "Debug",
+    "C/C++ File.kmp.cpp.executor": "Run",
+    "C/C++ File.第二章作业.cpp.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Abalone/Desktop/Code/Grade2Term1Code/C",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="C/C++ File.ex6Tree.cpp">
+}]]></component>
+  <component name="RunManager" selected="C/C++ File.huffman.cpp">
     <configuration name="第二章作业.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C" TARGET_NAME="第二章作业.cpp" CONFIG_NAME="第二章作业.cpp">
       <option name="sourceFile" value="ex5\第二章作业.cpp" />
       <method v="2">
@@ -106,6 +108,12 @@
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="huffman.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C" TARGET_NAME="huffman.cpp" CONFIG_NAME="huffman.cpp">
+      <option name="sourceFile" value="ex6\huffman.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="kmp.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C" TARGET_NAME="kmp.cpp" CONFIG_NAME="kmp.cpp">
       <option name="sourceFile" value="ex6\kmp.cpp" />
       <method v="2">
@@ -128,11 +136,23 @@
       <workItem from="1762421465495" duration="9115000" />
       <workItem from="1762751839663" duration="4047000" />
       <workItem from="1762756226796" duration="4055000" />
+      <workItem from="1762773573265" duration="3378000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ex6/huffman.cpp</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
