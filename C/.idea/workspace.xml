@@ -13,8 +13,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42d6fb1c-ee9c-4f42-903c-ac0c1ed61e51" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ex6/ex6Tree.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex6/ch3homework.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ex6/ch3homework.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch3homework.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ch3homework.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +45,7 @@
     &quot;C/C++ File.ex5T1.cpp.executor&quot;: &quot;Run&quot;,
     &quot;C/C++ File.ex5T3(1).cpp.executor&quot;: &quot;Run&quot;,
     &quot;C/C++ File.ex5T3(2).cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.ex6Tree.cpp.executor&quot;: &quot;Run&quot;,
     &quot;C/C++ File.kmp.cpp.executor&quot;: &quot;Run&quot;,
     &quot;C/C++ File.第二章作业.cpp.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -63,7 +65,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="C/C++ File.ch3homework.cpp">
+  <component name="RunManager" selected="C/C++ File.ex6Tree.cpp">
     <configuration name="第二章作业.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C" TARGET_NAME="第二章作业.cpp" CONFIG_NAME="第二章作业.cpp">
       <option name="sourceFile" value="ex5\第二章作业.cpp" />
       <method v="2">
@@ -100,6 +102,12 @@
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ex6Tree.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C" TARGET_NAME="ex6Tree.cpp" CONFIG_NAME="ex6Tree.cpp">
+      <option name="sourceFile" value="ex6\ex6Tree.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="kmp.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C" TARGET_NAME="kmp.cpp" CONFIG_NAME="kmp.cpp">
       <option name="sourceFile" value="ex6\kmp.cpp" />
       <method v="2">
@@ -120,6 +128,8 @@
       <workItem from="1762389493370" duration="4659000" />
       <workItem from="1762394560134" duration="669000" />
       <workItem from="1762421465495" duration="9115000" />
+      <workItem from="1762751839663" duration="4047000" />
+      <workItem from="1762756226796" duration="3809000" />
     </task>
     <servers />
   </component>
