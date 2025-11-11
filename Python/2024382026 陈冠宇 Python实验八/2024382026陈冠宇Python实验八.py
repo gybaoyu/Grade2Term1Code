@@ -1,8 +1,5 @@
 # T1 连乘计算
 # 实现multi()函数，参数个数不限。返回所有参数的乘积。
-import math
-
-
 def multi(*nums):
     result = 1
     for num in nums:
@@ -12,6 +9,8 @@ print("multi(1,2,3,4) =",multi(1,2,3,4))
 
 # T2质数判断
 # 实现isPrime()函数，参数为整数。如果实参是整数且为质数，返回True，否则返回False。
+# 31
+import math
 def isPrime(num):
     for i in range(2,int(math.sqrt(num))+1):
         if num % i == 0:
@@ -25,6 +24,7 @@ else:
 
 # T3寻找水仙花数
 # 实现isNarcissus(x)函数判断x是否是水仙花数，如果是，则输出x。利用isNarcissus()函数找出[100，999]范围内所有水仙花数。
+# 153
 def isNarcissus(num):
     if  100<=num<=999 and type(num)==int:
         a = num//100
@@ -40,6 +40,7 @@ else:
     print("The number is not Narcissus")
 
 # T4设计一个简单计算器的程序，可以实现加、减、乘、除、整除和幂运算。
+# 5//3
 def add(a,b):
     return a+b
 def subtract(a, b):
@@ -57,7 +58,6 @@ def power(a,b):
     for i in range(1,b+1):
         res*=a
     return res
-
 
 m=eval(input('请输入第一个操作数:'))       #输入整数、浮点数或复数
 sign=input('输入运算符号:')             #输入运算符号'+'、'-'、'*'、'/'、'//'、'**'
@@ -83,25 +83,12 @@ import turtle
 import math
 
 def draw_polygon(aTurtle, size=50, n=3):
-    ''' 绘制正多边形
-    args:
-        aTurtle: turtle对象实例
-        size: int类型，正多边形的边长
-        n: int类型，是几边形
-    '''
     for i in range(n):
         aTurtle.forward(size)
         aTurtle.left(360.0 / n)
 
 
 def draw_n_angle(aTurtle, size=50, num=5, color=None):
-    ''' 绘制正n角形，默认为黄色
-    args:
-        aTurtle: turtle对象实例
-        size: int类型，正多角形的边长
-        n: int类型，是几角形
-        color: str， 图形颜色，默认不填色
-    '''
     if color:
         aTurtle.begin_fill()
         aTurtle.fillcolor(color)
@@ -115,17 +102,7 @@ def draw_n_angle(aTurtle, size=50, num=5, color=None):
 
 
 def draw_5_angle(aTurtle=None, start_pos=(0, 0), end_pos=(0, 10), radius=100, color=None):
-    ''' 根据起始位置、结束位置和外接圆半径画五角星
-
-    args:
-        aTurtle: turtle对象实例
-        start_pos: int的二元tuple，要画的五角星的外接圆圆心
-        end_pos: int的二元tuple，圆心指向的位置坐标点
-        radius: 五角星外接圆半径
-        color: str， 图形颜色，默认不填色
-    '''
     aTurtle = aTurtle or turtle.Turtle()
-    # size = radius * math.sin(math.pi/5)/math.sin(math.pi*2/5)计算公式错误，但不影响显示
     size = radius * math.sin(math.pi / 5) / math.sin(math.pi * 3 / 10)  # 修正
     angle = math.degrees(math.atan2(end_pos[1] - start_pos[1], end_pos[0] - start_pos[0]))
     print(angle)
@@ -171,4 +148,5 @@ def draw_5_star_flag(times=20.0):
         draw_5_angle(aTurtle, start_pos=(pos[0] * times, pos[1] * times), end_pos=(-10 * times, 5 * times),radius=1 * times, color='yellow')
         # 点击关闭窗口
     window.exitonclick()
+
 draw_5_star_flag()

@@ -9,7 +9,7 @@ print("classA班能去但classB班不能去图书馆集体看书的日期:{}".fo
                                                                    .difference(classA.intersection(classB.intersection(lib)))))
 
 str0 = set(input("输入字符串: "))
-str1 = {'a','e','i','o','u'}
+str1 = {'a','e','i','o','u','A','E','I','O','U'}
 print("输入字符串中是否含有元音字母:{}".format(not str0.isdisjoint(str1)))
 
 ip = input("输入IP地址: ")
@@ -21,3 +21,5 @@ else:
         print(int(ip0, 2),end='')
         if i != 4:
             print('.',end='')
+#Apple
+#10110100111100001011111100001101
