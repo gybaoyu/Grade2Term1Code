@@ -5,39 +5,27 @@ def multi(*nums):
     for num in nums:
         result *= num
     return result
-print("multi(1,2,3,4) =",multi(1,2,3,4))
 
 # T2质数判断
 # 实现isPrime()函数，参数为整数。如果实参是整数且为质数，返回True，否则返回False。
-# 31
 import math
 def isPrime(num):
     for i in range(2,int(math.sqrt(num))+1):
         if num % i == 0:
             return False
     return True
-x = int(input("Enter a number: "))
-if isPrime(x):
-    print("The number is prime")
-else:
-    print("The number is not prime")
 
 # T3寻找水仙花数
 # 实现isNarcissus(x)函数判断x是否是水仙花数，如果是，则输出x。利用isNarcissus()函数找出[100，999]范围内所有水仙花数。
-# 153
 def isNarcissus(num):
     if  100<=num<=999 and type(num)==int:
         a = num//100
         b = (num//10)%10
         c = num%10
         if a**3+b**3+c**3 == num:
+            print(f"{num}是水仙花数")
             return True
     return False
-x = int(input("Enter a number: "))
-if isNarcissus(x):
-    print("The number is Narcissus")
-else:
-    print("The number is not Narcissus")
 
 # T4设计一个简单计算器的程序，可以实现加、减、乘、除、整除和幂运算。
 # 5//3
@@ -59,23 +47,21 @@ def power(a,b):
         res*=a
     return res
 
-m=eval(input('请输入第一个操作数:'))       #输入整数、浮点数或复数
-sign=input('输入运算符号:')             #输入运算符号'+'、'-'、'*'、'/'、'//'、'**'
-n=eval(input('请输入第二个操作数:'))
-if sign=='+':
-    print(add(m,n))
-elif sign=='-':
-    print(subtract(m, n))
-elif sign=='*':
-    print(multiply(m,n))
-elif sign=='/':
-    print(divide(m,n))
-elif sign=='//':
-    print(floorDivide(m,n))
-elif sign=='**':
-    print(power(m,n))
-else:
-    print("运算符号只能是'+'、'-'、'*'、'/'、'//'、'**'之一")
+def calculate(m,sign,n):
+    if sign=='+':
+        print(add(m,n))
+    elif sign=='-':
+        print(subtract(m, n))
+    elif sign=='*':
+        print(multiply(m,n))
+    elif sign=='/':
+        print(divide(m,n))
+    elif sign=='//':
+        print(floorDivide(m,n))
+    elif sign=='**':
+        print(power(m,n))
+    else:
+        print("运算符号只能是'+'、'-'、'*'、'/'、'//'、'**'之一")
 
 #T5
 # 以函数的方式，实现绘制五星红旗。利用turtle模块。
@@ -86,7 +72,6 @@ def draw_polygon(aTurtle, size=50, n=3):
     for i in range(n):
         aTurtle.forward(size)
         aTurtle.left(360.0 / n)
-
 
 def draw_n_angle(aTurtle, size=50, num=5, color=None):
     if color:
@@ -99,7 +84,6 @@ def draw_n_angle(aTurtle, size=50, num=5, color=None):
         aTurtle.right(2 * 360.0 / num)
     if color:
         aTurtle.end_fill()
-
 
 def draw_5_angle(aTurtle=None, start_pos=(0, 0), end_pos=(0, 10), radius=100, color=None):
     aTurtle = aTurtle or turtle.Turtle()
@@ -115,7 +99,6 @@ def draw_5_angle(aTurtle=None, start_pos=(0, 0), end_pos=(0, 10), radius=100, co
     aTurtle.pendown()
     aTurtle.right(math.degrees(math.pi * 9 / 10))
     draw_n_angle(aTurtle, size, 5, color)
-
 
 def draw_5_star_flag(times=20.0):
     width, height = 30 * times, 20 * times
@@ -149,4 +132,28 @@ def draw_5_star_flag(times=20.0):
         # 点击关闭窗口
     window.exitonclick()
 
+print("=====第一题=====")
+print("multi(1,2,3,4) =",multi(1,2,3,4))
+x=(1,2,3,4)
+print('multi(*x)',multi(*x))
+x=[1,2,3,4]
+print('multi(*x)',multi(*x))
+
+print("=====第二题=====")
+isPrime(3)
+print(isPrime(3))
+isPrime(30)
+print(isPrime(30))
+
+print("=====第三题=====")
+for i in range(100, 1000):
+    isNarcissus(i)
+
+print("=====第四题=====")
+m=eval(input('请输入第一个操作数:'))       #输入整数、浮点数或复数
+sign=input('输入运算符号:')             #输入运算符号'+'、'-'、'*'、'/'、'//'、'**'
+n=eval(input('请输入第二个操作数:'))
+calculate(m,sign,n)
+
+print("=====第五题=====")
 draw_5_star_flag()
