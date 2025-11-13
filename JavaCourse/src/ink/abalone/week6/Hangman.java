@@ -9,9 +9,6 @@ package ink.abalone.week6;/*
 
 
 
-import java.awt.GridLayout;
-import java.io.Console;
-
 import javax.swing.JFrame;
 
 public class Hangman {
