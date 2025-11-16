@@ -11,11 +11,10 @@ struct HTNode {
 		weight = w;
 		this->isLeaf = isLeaf;
 	}
-	HTNode(double w,HTNode *l,HTNode *r,bool isIn){
+	HTNode(double w,HTNode *l,HTNode *r){
 		weight = w;
 		this->l = l;
 		this->r = r;
-		this->isIn = isIn;
 	}
 };
 
@@ -42,7 +41,7 @@ HTNode* solve(){
 		});
 		if (nodes[1]->isIn)break;
 		nodes[0]->isIn = true,nodes[1]->isIn = true;
-		nodes.push_back(new HTNode(nodes[0]->weight+nodes[1]->weight,nodes[0],nodes[1], false));
+		nodes.push_back(new HTNode(nodes[0]->weight+nodes[1]->weight,nodes[0],nodes[1]));
 	}
 	return nodes[0];
 }
