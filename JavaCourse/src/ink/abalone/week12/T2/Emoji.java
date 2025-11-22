@@ -50,10 +50,10 @@ class EmojiComponent extends JComponent{
         g2.fill(circle);
         g2.draw(circle);
         int from = -100,to = 100,n = to-from+1;
-        g2.fillPolygon(getXPoints(-100,100),getYPoints(-100,100,x->{
-
-            return 0;
-        }),n);
+//        g2.fillPolygon(getXPoints(-100,100),getYPoints(-100,100,x->{
+//
+//            return 0;
+//        }),n);
     }
 
     @Override
