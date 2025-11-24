@@ -31,29 +31,34 @@ class EmojiComponent extends JComponent{
     public EmojiComponent(double scale) {
         this.scale = scale;
     }
-    int[] getYPoints(int from, int to, Function<Integer,Integer> func1,Function<Integer,Integer> func2){
-        int n = to-from+1;
-        int[] res =new int[n];
-        for (int i=from,j=0;i<to;i++,j++){
-            res[j] = func1.apply(j);
-        }
-        return res;
+
+    void drawCurve(Point2D.Double p1,Point2D.Double p2, Point2D.Double p3,Graphics2D g2) {
+        g2.setStroke(new BasicStroke(10.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+        QuadCurve2D curve = new QuadCurve2D.Double(p1.x, p1.y, p2.x, p2.y, p3.x, p3.y);
+        g2.draw(curve);
     }
 
     @Override
-    public void paintComponent(Graphics g){
+    public void paintComponent(Graphics g) {
         var g2 = (Graphics2D) g;
         double R = 150;
-        var circle = new Ellipse2D.Double();
-        circle.setFrameFromCenter(DEFAULT_WIDTH/2.0,DEFAULT_HEIGHT/2.0,DEFAULT_WIDTH*scale/2.0+R,DEFAULT_HEIGHT*scale/2.0+R);
-        g2.setPaint(new Color(231,203,72));
-        g2.fill(circle);
-        g2.draw(circle);
-        int from = -100,to = 100,n = to-from+1;
-//        g2.fillPolygon(getXPoints(-100,100),getYPoints(-100,100,x->{
-//
-//            return 0;
-//        }),n);
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        var face = new Ellipse2D.Double();
+        face.setFrameFromCenter(DEFAULT_WIDTH / 2.0, DEFAULT_HEIGHT / 2.0, DEFAULT_WIDTH * scale / 2.0 + R, DEFAULT_HEIGHT * scale / 2.0 + R);
+        g2.setPaint(new Color(243, 79, 84));
+        g2.fill(face);
+        g2.setPaint(Color.WHITE);
+        g2.fillOval(105,150,90,90);
+        g2.fillOval(215,150,90,90);
+        g2.setPaint(new Color(66,41,52));
+        g2.fillOval(150,177,40,40);
+        g2.fillOval(220,177,40,40);
+
+        g2.setColor(new Color(78,57,82)); // 设置曲线颜色
+        drawCurve(new Point2D.Double(155,270),new Point2D.Double(205,210),new Point2D.Double(250,270),g2);
+        drawCurve(new Point2D.Double(145,130),new Point2D.Double(150,150),new Point2D.Double(190,160),g2);
+        drawCurve(new Point2D.Double(220,160),new Point2D.Double(260,150),new Point2D.Double(265,130),g2);
+
     }
 
     @Override
@@ -61,8 +66,3 @@ class EmojiComponent extends JComponent{
         return new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT);
     }
 }
-/*
-y = ax^2
-150 25 a = 0.0044444444
-150 45 a = 0.008
-*/
