@@ -19,6 +19,7 @@ typedef enum {DG,DN,UDG,UDN} GraphKind;//有向图，有向网，无向图，无
 struct Node{
 	NType adj;//权值类型
 	ElemType *elem;//该节点具体信息
+	Node(){}
 };
 
 struct Graph{
@@ -30,4 +31,21 @@ struct Graph{
 int main() {
 
 	return 0;
+}
+
+Graph* init(GraphKind type,int vexN,int arcN){
+	Graph* g  = new Graph;
+	for (int i = 1; i <=vexN; ++i) {
+		for (int j = 1; j <=vexN; ++j) {
+			g->adjM[i][j] = new Node();
+		}
+	}
+
+	if (type==DG||type==UDG){
+		for (int i = 0; i < arcN; ++i) {
+
+		}
+	}else{
+
+	}
 }
