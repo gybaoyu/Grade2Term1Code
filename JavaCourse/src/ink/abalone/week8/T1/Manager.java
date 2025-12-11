@@ -29,4 +29,8 @@ public class Manager extends Employee {
     public int hashCode() {
         return Objects.hash(super.hashCode(), bonus);
     }
+
+    public double getBonus() {
+        return bonus;
+    }
 }
