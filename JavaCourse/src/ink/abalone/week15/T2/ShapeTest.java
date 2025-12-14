@@ -2,10 +2,8 @@ package ink.abalone.week15.T2;
 
 public class ShapeTest{
     public static void main(String[] args) {
-        Square s = new Square(5.0);
-        Circle c = new Circle(5.0);
-        Shape<Square> shape1 = new Shape<>(s);
-        Shape<Circle> shape2 = new Shape<>(c);
+        Shape<Square> shape1 = new Shape<>(new Square(5.0));
+        Shape<Circle> shape2 = new Shape<>(new Circle(5.0));
         shape1.printArea();
         shape2.printArea();
     }
