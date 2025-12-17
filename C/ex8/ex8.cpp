@@ -10,17 +10,12 @@
 using namespace std;
 
 bool cmp(ElemType x, ElemType y);
-
 int search(List l, ElemType key);
-
 void initBinarySortTree(TNode *&root, int n);
-
-void binarySearch(TNode *&node, int key, TNode *&res);
-
-void deleteTreeNode(TNode *&node);
+TNode *binarySearch(TNode *&node, int key);
+void deleteNode(TNode *node);
 
 /*
-13 6 7 23 53 32 1 8 9 3
 13 6 7 23 53 32 1 8 9 3
  */
 int main() {
@@ -33,9 +28,10 @@ int main() {
 	search(myList, 53);
 	//T2 随机产生一组关键字，利用二叉排序树的插入算法建立二叉排序树，然后删除某一指定关键字元素。
 	TNode *root;
-	initBinarySortTree(root, 2);
+	initBinarySortTree(root, 10);
 	inTraverse(root);
-	deleteTreeNode(root);
+	deleteNode(root);
+	inTraverse(root);
 	return 0;
 }
 
@@ -56,8 +52,7 @@ int search(List l, ElemType key) {
 }
 
 void addTNode(TNode *&root, TNodeElem data) {
-	TNode *node;
-	binarySearch(root, data, node);
+	TNode *node = binarySearch(root, data);
 	if (node->data < data) node->r = new TNode(data);
 	else if (node->data > data) node->l = new TNode(data);
 }
@@ -69,35 +64,36 @@ void initBinarySortTree(TNode *&root, int n) {
 	for (int i = 0; i < n - 1; ++i) addTNode(root, 1 + rand() % 1000);
 }
 
-void binarySearch(TNode *&node, int key, TNode *&res) {
-	res = node;
-	if (key == node->data)return;
-	if (key > node->data){
-		if (node->r != nullptr) binarySearch(node->r, key, res);
-	}else
-		if (node->l != nullptr) binarySearch(node->l, key, res);
+TNode *binarySearch(TNode *&node, int key) {
+	if (key == node->data)return node;
+	if (key > node->data) {
+		if (node->r == nullptr)return node;
+		return binarySearch(node->r, key);
+	} else {
+		if (node->l == nullptr)return node;
+		return binarySearch(node->l, key);
+	}
 }
 
-void deleteTreeNode(TNode *&node) {
-	TNodeElem data;
-	cin >> data;
-	TNode *find;
-	binarySearch(node, data, find);
-	TNode *q = find;
-	if (find->l == nullptr && find->r == nullptr) {
-		find = nullptr;
-		free(q);
-	} else if (find->l == nullptr) {
-		find = find->l;
-		q = nullptr;
-		free(q);
-	} else if (find->r == nullptr) {
-		find = find->r;
-		q = nullptr;
-		free(q);
-	} else {
+TNode *deleteTreeNode(TNode *node, TNodeElem data) {
+	if (data < node->data) node->l = deleteTreeNode(node->l, data);
+	else if (data > node->data) node->r = deleteTreeNode(node->r, data);
+	else {
+		if (node->l == nullptr) return node->r;
+		else if (node->r == nullptr) return node->l;
 
+		TNode *minNode = node->r;
+		while (minNode->l != nullptr) {
+			minNode = minNode->l;
+		}
+		node->data = minNode->data;
+		node->r = deleteTreeNode(node->r, minNode->data);
 	}
+	return node;
+}
 
-	inTraverse(node);
+void deleteNode(TNode *node) {
+	int data;
+	cin >> data;
+	deleteTreeNode(node, data);
 }
