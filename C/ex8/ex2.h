@@ -119,47 +119,47 @@ void sortList(List &l, bool(*compare)(ElemType, ElemType)) {
 	}
 }
 
-int main() {
-	List myList{},myList2{};
-	initList(myList);//实验内容1
-
-	//实验内容2
-	int n;
-	cin>>n;
-	autoInsert(myList,n);
-
-	//实验内容3
-	printList(myList);
-
-	//实验内容4
-	ElemType delElem;
-	cout << "before delete:" << endl;
-	printList(myList);
-	deleteList(myList, 3, delElem);
-	cout << "after delete:" << endl;
-	printList(myList);
-	cout << "the value of deleted element is " << delElem << endl;
-
-	//实验内容5
-	cout<<endl;
-	locateListAndPrint(myList, 66, isEqual);
-	locateListAndPrint(myList, 100, isEqual);
-
-	//实验内容6
-	cin>>n;
-	autoInsert(myList2,n);
-	cout<<"before union: "<<endl<<"list1: "<<endl;
-	printList(myList);
-	cout<<endl<<"list2:"<<endl;
-	printList(myList2);
-
-	cout<<endl<<"after union: "<<endl<<"list1: "<<endl;
-	unionList(myList,myList2);
-	printList(myList);
-	cout<<endl<<"list2: "<<endl;
-	printList(myList2);
-	return 0;
-}
+//int main() {
+//	List myList{},myList2{};
+//	initList(myList);//实验内容1
+//
+//	//实验内容2
+//	int n;
+//	cin>>n;
+//	autoInsert(myList,n);
+//
+//	//实验内容3
+//	printList(myList);
+//
+//	//实验内容4
+//	ElemType delElem;
+//	cout << "before delete:" << endl;
+//	printList(myList);
+//	deleteList(myList, 3, delElem);
+//	cout << "after delete:" << endl;
+//	printList(myList);
+//	cout << "the value of deleted element is " << delElem << endl;
+//
+//	//实验内容5
+//	cout<<endl;
+//	locateListAndPrint(myList, 66, isEqual);
+//	locateListAndPrint(myList, 100, isEqual);
+//
+//	//实验内容6
+//	cin>>n;
+//	autoInsert(myList2,n);
+//	cout<<"before union: "<<endl<<"list1: "<<endl;
+//	printList(myList);
+//	cout<<endl<<"list2:"<<endl;
+//	printList(myList2);
+//
+//	cout<<endl<<"after union: "<<endl<<"list1: "<<endl;
+//	unionList(myList,myList2);
+//	printList(myList);
+//	cout<<endl<<"list2: "<<endl;
+//	printList(myList2);
+//	return 0;
+//}
 /*
 6
 25 12 78 34 100 88
