@@ -18,6 +18,10 @@ public class Employee implements Cloneable{
         salary += raise;
     }
 
+    public Employee(String name){
+        this.name = name;
+    }
+
     public Employee(String name, double salary) {
         this.name = name;
         this.salary = salary;
