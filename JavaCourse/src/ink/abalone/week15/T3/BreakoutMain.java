@@ -2,26 +2,14 @@ package ink.abalone.week15.T3;
 
 import javax.swing.*;
 
-/**
- * 
- */
-
-/**
- * @author bh
- *
- */
 public class BreakoutMain {
-
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		  JFrame frame = new JFrame ("break out");
+		  frame.setLocation(600,100);
 	      frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
-	      frame.getContentPane().add (new BreakoutPanel());
+	      frame.getContentPane().add (new BreakoutPanel(frame));
 	      frame.pack();
+		  frame.setResizable(false);
 	      frame.setVisible(true);
 	}
-
 }
