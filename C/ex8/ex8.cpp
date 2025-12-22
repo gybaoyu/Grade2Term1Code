@@ -1,8 +1,4 @@
-//
 // Created by Abalone on 2025/12/17.
-//
-
-
 #include <bits/stdc++.h>
 #include "ex2.h"
 #include "ex6Tree.h"
@@ -11,9 +7,9 @@ using namespace std;
 
 bool cmp(ElemType x, ElemType y);
 int search(List l, ElemType key);
-void initBinarySortTree(TNode *&root, int n);
-TNode *binarySearch(TNode *&node, int key);
-void deleteNode(TNode *node);
+void initBinarySortTree(TNode<int> *&root, int n);
+TNode<int> *binarySearch(TNode<int> *&node, int key);
+void deleteNode(TNode<int> *node);
 
 /*
 13 6 7 23 53 32 1 8 9 3
@@ -27,11 +23,11 @@ int main() {
 	search(myList, 5);
 	search(myList, 53);
 	//T2 随机产生一组关键字，利用二叉排序树的插入算法建立二叉排序树，然后删除某一指定关键字元素。
-	TNode *root;
+	TNode<int> *root;
 	initBinarySortTree(root, 10);
-	inTraverse(root);
+	root->inTraverse(root);
 	deleteNode(root);
-	inTraverse(root);
+	root->inTraverse(root);
 	return 0;
 }
 
@@ -51,20 +47,20 @@ int search(List l, ElemType key) {
 	return -1;
 }
 
-void addTNode(TNode *&root, TNodeElem data) {
-	TNode *node = binarySearch(root, data);
-	if (node->data < data) node->r = new TNode(data);
-	else if (node->data > data) node->l = new TNode(data);
+void addTNode(TNode<int> *&root, int data) {
+	TNode<int> *node = binarySearch(root, data);
+	if (node->data < data) node->r = new TNode<int>(data);
+	else if (node->data > data) node->l = new TNode<int>(data);
 }
 
-void initBinarySortTree(TNode *&root, int n) {
+void initBinarySortTree(TNode<int> *&root, int n) {
 	srand((unsigned int) time(nullptr));
-	root = new TNode(1 + rand() % 1000);
+	root = new TNode<int>(1 + rand() % 1000);
 	cout << root->data << endl;
 	for (int i = 0; i < n - 1; ++i) addTNode(root, 1 + rand() % 1000);
 }
 
-TNode *binarySearch(TNode *&node, int key) {
+TNode<int> *binarySearch(TNode<int> *&node, int key) {
 	if (key == node->data)return node;
 	if (key > node->data) {
 		if (node->r == nullptr)return node;
@@ -75,14 +71,14 @@ TNode *binarySearch(TNode *&node, int key) {
 	}
 }
 
-TNode *deleteTreeNode(TNode *node, TNodeElem data) {
+TNode<int> *deleteTreeNode(TNode<int> *node, int data) {
 	if (data < node->data) node->l = deleteTreeNode(node->l, data);
 	else if (data > node->data) node->r = deleteTreeNode(node->r, data);
 	else {
 		if (node->l == nullptr) return node->r;
 		else if (node->r == nullptr) return node->l;
-
-		TNode *minNode = node->r;
+	
+		TNode<int> *minNode = node->r;
 		while (minNode->l != nullptr) {
 			minNode = minNode->l;
 		}
@@ -92,7 +88,7 @@ TNode *deleteTreeNode(TNode *node, TNodeElem data) {
 	return node;
 }
 
-void deleteNode(TNode *node) {
+void deleteNode(TNode<int> *node) {
 	int data;
 	cin >> data;
 	deleteTreeNode(node, data);
