@@ -4,15 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.random.RandomGenerator;
 
 import static java.lang.Math.*;
 
-/**
- * @author CGY
- */
 public class BreakoutPanel extends JPanel {
     //system
     public static final int APPLICATION_WIDTH = 400, APPLICATION_HEIGHT = 600;
